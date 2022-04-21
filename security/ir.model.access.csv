@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+acess_persona_group_user,access_persona,model_persona,base.group_user,1,1,1,1
+acess_hoja_vida_group_user,access_hoja_vida,model_hoja_vida,base.group_user,1,1,1,1
+acess_tipo_persona_group_user,access_tipo_persona,model_tipo_persona,base.group_user,1,1,1,1

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- VISTA FORM: personas -->
+    <record id="view_persona_form" model="ir.ui.view">
+        <field name="name">persona.form</field>
+        <field name="model">persona</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="persona">
+                <sheet>
+                    <group>
+                            <field name="photo" widget="image" class="oe_avatar"/>               
+                            <field name="name"/>
+                            <field name="active"/>
+                            <field name="lastname"/>
+                            <field name="age"/>
+                            <field name="address"/>
+                            <field name="email"/>
+                            <field name="phone"/>
+                            <field name="birthdate"/>
+                            <field name="gender"/>
+                            <field name="type_person_id"/>
+                            <field name="sheelife_ids"/>
+                    </group>
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+    <!-- FIN VISTA FORM: personas -->
+    
+    <!-- VISTA TREE: personas -->
+    <record id="view_persona_tree" model="ir.ui.view">
+        <field name="name">persona.tree</field>
+        <field name="model">persona</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="persona">
+                <field name="name"/>
+                <field name="active"/>
+                <field name="lastname"/>
+                <field name="age"/>
+                <field name="address"/>
+                <field name="email"/>
+                <field name="phone"/>
+                <field name="birthdate"/>
+                <field name="photo"/>
+                <field name="gender"/>
+                <field name="type_person_id"/>
+            </tree>
+        </field>
+    </record>
+    <!-- FIN VISTA TREE: personas -->
+    
+    <!-- ACTION: personas -->
+    <record id="action_persona" model="ir.actions.act_window">
+        <field name="name">Persona</field>
+        <field name="res_model">persona</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Click para crear nuevo registro</p>
+        </field>
+    </record>
+    <!-- FIN ACTION: personas -->
+    
+    <menuitem name="Persona" 
+    id="menu_persona" 
+    action="action_persona" 
+    sequence="10"/>
+</odoo>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- VISTA FORM: tipo_personas -->
+    <record id="tipo_persona_view_form" model="ir.ui.view">
+        <field name="name">tipo.persona.form</field>
+        <field name="model">tipo.persona</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="tipo.persona">
+                <group col="4" colspan="2">                
+                    <field name="type_person"/>
+                    <field name="active"/>
+                </group>
+            </form>
+        </field>
+    </record>
+    <!-- FIN VISTA FORM: tipo_personas -->
+    
+    <!-- VISTA TREE: tipo_personas -->
+    <record id="tipo_persona_view_tree" model="ir.ui.view">
+        <field name="name">tipo.persona.tree</field>
+        <field name="model">tipo.persona</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="tipo.persona">
+                <field name="type_person"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+    <!-- FIN VISTA TREE: personas -->
+    
+    <!-- ACTION: personas -->
+    <record id="action_tipo_persona" model="ir.actions.act_window">
+        <field name="name">Tipo de Personas</field>
+        <field name="res_model">tipo.persona</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Click para crear nuevo registro</p>
+        </field>
+    </record>
+    <!-- FIN ACTION: personas -->
+    
+    <menuitem name="tipo de personas" 
+    id="menu_tipo_persona" 
+    action="action_tipo_persona" 
+    sequence="10"/>
+</odoo>

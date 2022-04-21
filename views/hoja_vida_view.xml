@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- VISTA FORM: personas -->
+    <record id="hoja_vida_view_form" model="ir.ui.view">
+        <field name="name">hoja_vida.form</field>
+        <field name="model">hoja.vida</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="hoja_vida">
+                <group col="4" colspan="2">                
+                    <field name="profession"/>
+                    <field name="from_job"/>
+                    <field name="until_job"/>
+                    <field name="job_sitio"/>
+                    
+                </group>
+            </form>
+        </field>
+    </record>
+    <!-- FIN VISTA FORM: personas -->
+    
+    <!-- VISTA TREE: personas -->
+    <record id="hoja_vida_view_tree" model="ir.ui.view">
+        <field name="name">hoja_vida.tree</field>
+        <field name="model">hoja.vida</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Hoja de Vida">
+              <field name="profession"/>
+                    <field name="from_job"/>
+                    <field name="until_job"/>
+                    <field name="job_sitio"/>
+            </tree>
+        </field>
+    </record>
+    <!-- FIN VISTA TREE: personas -->
+    
+    <!-- ACTION: personas -->
+    <record id="action_hoja_vida" model="ir.actions.act_window">
+        <field name="name">Hoja de Vida</field>
+        <field name="res_model">hoja.vida</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Click para crear nuevo registro</p>
+        </field>
+    </record>
+    <!-- FIN ACTION: personas -->
+    
+    <menuitem name="Hoja de Vida" 
+    id="menu_hoja_vida" 
+    action="action_hoja_vida" 
+    sequence="10"/>
+</odoo>
